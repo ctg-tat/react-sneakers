@@ -14,8 +14,42 @@ body{
     background-color: #e7f6ff;
 }
 
+main{
+    padding-top: 48px;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.button{
+    border: none;
+    outline: none;
+    text-decoration: none;
+
+    font-size: 16px;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    background-color: #9dd558;
+    border-radius: 18px;
+    padding: 18px 32px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &.xl{
+        padding: 18px 64px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}
+
 .layout{
-    --offset: 15px;
+    --offset: 48px;
 
     max-width: calc(1080px + var(--offset)*2);
 
@@ -39,6 +73,11 @@ body{
     align-items: center;
     justify-content: space-between;
 
+    margin: 0 calc(var(--offset) * -1);
+    padding: 32px var(--offset);
+
+    border-bottom: 1px solid #EAEAEA;
+
     nav{
         display: flex;
         flex-direction: row;
@@ -46,7 +85,6 @@ body{
         gap: 30px;
 
         a, button{
-            text-decoration: none;
             border: none;
             
             font-size: 14px;
@@ -61,6 +99,8 @@ body{
             flex-direction: row;
             align-items: center;
             gap: 10px;
+
+            cursor: pointer;
         }
     }
 }
@@ -69,4 +109,256 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 16px;
+
+    h1{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-transform: uppercase;
+
+        color: #000000;
+    }
+
+    p{
+        font-size: 14px;
+        line-height: 17px;
+
+        color: #9D9D9D;
+    }
+}
+
+// Slider
+
+.slider{
+    position: relative;
+
+    .slides{
+        .slide{
+            min-height: 300px;
+            padding: 32px;
+            background-color: #5c5c5c;
+            border-radius: 24px;
+
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+
+            &__left{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 20px;
+
+                h2{
+                    font-weight: 700;
+                    font-style: 38px;
+                    line-height: 46px;
+                }
+            }
+
+            &__right{
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .control{
+        position: absolute;
+
+        z-index: 3;
+
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        
+        button{
+            --size: 35px;
+
+            width: var(--size);
+            height: var(--size);
+
+            border: none;
+            outline: none;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            cursor: pointer;
+
+            background-color: #fff;
+
+            border-radius: 50%;
+
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
+
+            &.prev{
+                margin-left: calc(var(--size) / -2);
+            }
+
+            &.next{
+                margin-right: calc(var(--size) / -2);
+            }
+        }
+    }
+}
+
+// Section
+
+.section{
+    margin-top: 48px;
+
+    &-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        h2{
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 39px;
+        }
+    }
+}
+
+.search-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 16px 18px;
+
+    border: 1px solid #F3F3F3;
+    border-radius: 10px;
+
+    & > svg {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    input{
+        border: none;
+        outline: none;
+        font-family: "inter", sans-serif;
+
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #C4C4C4;
+    }
+}
+
+// Product
+
+.products{
+    margin-top: 40px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: max-content;
+    gap: 40px;
+}
+
+.product{
+    padding: 20px 30px 32px 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    background: #FFFFFF;
+    border: 1px solid #F3F3F3;
+    border-radius: 16px;
+
+    position: relative;
+
+    button{
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        background-color: #fff;
+
+        border: 1px solid #F2F2F2;
+        border-radius: 8px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        --size: 32px;
+
+        width: var(--size);
+        height: var(--size);
+    }
+
+    &__action{
+        position: absolute;
+        top: 30px;
+        left: 30px; 
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        
+        max-height: 120px;
+
+        display: block;
+    }
+
+    h3{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    &__footer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .price{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+
+        .gray{
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 13px;
+            text-transform: uppercase;
+            color: #BDBDBD;
+        }
+
+        .value{
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+        }
+    }
 }

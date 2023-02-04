@@ -1,4 +1,4 @@
-export const CartIcon = ({ size = "28" }) => {
+export const CartIcon = ({ size = "24" }) => {
     return(
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width={size} height={size} viewBox="0 0 24 24" strokeWidth="2" stroke="#9B9B9B" fill="none" strokeLinecap="round" strokeLinejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -10,7 +10,7 @@ export const CartIcon = ({ size = "28" }) => {
     )
 }
 
-export const LikeIcon = ({ size = "28" }) => {
+export const LikeIcon = ({ size = "24" }) => {
     return(
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width={size} height={size} viewBox="0 0 24 24" strokeWidth="2" stroke="#9B9B9B" fill="none" strokeLinecap="round" strokeLinejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -19,13 +19,51 @@ export const LikeIcon = ({ size = "28" }) => {
     )
 }
 
-export const OrderIcon = ({size = "28"}) => {
+export const OrderIcon = ({size = "24"}) => {
     return(
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-truck" width={size} height={size} viewBox="0 0 24 24" strokeWidth="2" stroke="#9B9B9B" fill="none" strokeLinecap="round" strokeLinejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <circle cx="7" cy="17" r="2" />
             <circle cx="17" cy="17" r="2" />
             <path d="M5 17h-2v-11a1 1 0 0 1 1 -1h9v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5" />
+        </svg>
+    )
+}
+
+export const PrevArrowIcon = ({size = "24", color="#c8c8c8"}) => {
+    return(
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width={size} height={size} viewBox="0 0 24 24" strokeWidth="2" stroke={color} fill="none" strokeLinecap="round" strokeLinejoin="round"> 
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> 
+            <path d="M15 6l-6 6l6 6"></path> 
+        </svg>
+    )
+}
+
+export const NextArrowIcon = ({size = "24", color="#c8c8c8"}) => {
+    return(
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width={size} height={size} viewBox="0 0 24 24" strokeWidth="2" stroke={color} fill="none" strokeLinecap="round" strokeLinejoin="round"> 
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> 
+            <path d="M9 6l6 6l-6 6"></path> 
+        </svg>
+    )
+}
+
+export const SearchIcon = ({size = "24", color="#e4e4e4"}) => {
+    return(
+        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-search" width={size} height={size} viewBox="0 0 24 24" strokeWidth="2" stroke={color} fill="none" strokeLinecap="round" strokeLinejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+            <path d="M21 21l-6 -6"></path>
+        </svg>
+    )
+}
+
+export const PlusIcon = ({size = "24", color="#e4e4e4"}) => {
+    return(
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width={size} height={size} viewBox="0 0 24 24" strokeWidth="1.5" stroke={color} fill="none" strokeLinecap="round" strokeLinejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
         </svg>
     )
 }
