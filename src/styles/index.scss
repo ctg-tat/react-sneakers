@@ -152,7 +152,7 @@ a{
 
                 h2{
                     font-weight: 700;
-                    font-style: 38px;
+                    font-size: 38px;
                     line-height: 46px;
                 }
             }
@@ -186,6 +186,10 @@ a{
 
         
         button{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            
             --size: 35px;
 
             width: var(--size);
@@ -209,10 +213,12 @@ a{
 
             &.prev{
                 margin-left: calc(var(--size) / -2);
+                left: 0;
             }
 
             &.next{
                 margin-right: calc(var(--size) / -2);
+                right: 0;
             }
         }
     }
